@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المرجع الشامل لمواصفة BS EN 197-1:2011 - جميع أنواع الاسمنت والمتطلبات">
+    <title>BS EN 197-1:2011 - المرجع الشامل لأنواع الاسمنت</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+    :root {
+        --primary-blue: #1e40af;
+        --primary-blue-dark: #1d4ed8;
+        --primary-orange: #ea580c;
+        --primary-orange-dark: #f97316;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
+        --bg-tertiary: #e2e8f0;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --text-muted: #94a3b8;
+        --border-color: #e2e8f0;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --error-color: #ef4444;
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        --border-radius: 0.75rem;
+    }
+
+    [data-theme="dark"] {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --border-color: #475569;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        transition: all 0.3s ease;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    .header {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+        color: white;
+        padding: 3rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        opacity: 0.3;
+    }
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .standard-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .header-title {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #ffffff, #e2e8f0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.2;
+    }
+
+    .header-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .credits-section {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .credit-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem 1.5rem;
+        border-radius: var(--border-radius);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .credit-content {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .credit-content strong {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+
+    .email-link {
+        color: var(--primary-orange);
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    .email-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Navigation */
+    .navbar {
+        background: var(--bg-primary);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid var(--border-color);
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    [data-theme="dark"] .navbar {
+        background: rgba(15, 23, 42, 0.95);
+    }
+
+    .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-tools {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .theme-toggle {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        background: var(--bg-tertiary);
+        transform: translateY(-2px);
+    }
+
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-input {
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        width: 300px;
+        transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        transform: scale(1.02);
+    }
+
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    /* Section */
+    .section {
+        padding: 4rem 0;
+        position: relative;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .section-title i {
+        color: var(--primary-blue);
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Overview Cards */
+    .overview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .overview-card {
+        background: var(--bg-secondary);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .overview-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
+    }
+
+    .overview-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary-blue);
+    }
+
+    .card-icon {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+
+    /* Cement Filter */
+    .cement-filter {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .filter-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        border: 1px solid var(--border-color);
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .filter-btn:hover {
+        background: var(--primary-blue);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+        background: var(--primary-blue);
+        color: white;
+        border-color: var(--primary-blue);
+    }
+
+    /* Cement Family */
+    .cement-family {
+        margin-bottom: 3rem;
+    }
+
+    .family-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .family-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-blue);
+    }
+
+    .family-count {
+        background: var(--primary-orange);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    /* Cement Grid */
+    .cement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Cement Card */
+    .cement-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .cement-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .cement-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+        border-color: var(--primary-blue);
+    }
+
+    .cement-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .cement-header {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .cement-symbol {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .cement-name {
+        font-size: 1rem;
+        opacity: 0.9;
+        margin-bottom: 1rem;
+    }
+
+    .clinker-indicator {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        display: inline-block;
+    }
+
+    .cement-body {
+        padding: 1.5rem;
+    }
+
+    .composition-bar {
+        height: 8px;
+        background: var(--bg-tertiary);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        display: flex;
+    }
+
+    .clinker-fill {
+        background: linear-gradient(90deg, var(--success-color), #059669);
+        transition: width 0.8s ease;
+    }
+
+    .additive-fill {
+        transition: width 0.8s ease;
+    }
+
+    .additive-fill.slag {
+        background: linear-gradient(90deg, #6366f1, #4f46e5);
+    }
+
+    .additive-fill.silica {
+        background: linear-gradient(90deg, var(--warning-color), #d97706);
+    }
+
+    .cement-description {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .cement-applications {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .app-tag {
+        background: var(--bg-tertiary);
+        color: var(--text-primary);
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .cement-footer {
+        padding: 1rem 1.5rem;
+        border-top: 1px solid var(--border-color);
+        background: var(--bg-primary);
+    }
+
+    .detail-btn {
+        width: 100%;
+        background: var(--primary-blue);
+        color: white;
+        border: none;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .detail-btn:hover {
+        background: var(--primary-blue-dark);
+        transform: translateY(-2px);
+    }
+
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        z-index: 2000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .modal.active {
+        display: flex;
+        opacity: 1;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .modal-content {
+        background: var(--bg-primary);
+        border-radius: var(--border-radius);
+        max-width: 800px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+
+    .modal.active .modal-content {
+        transform: scale(1);
+    }
+
+    .modal-header {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: rotate(90deg);
+    }
+
+    .modal-body {
+        padding: 2rem;
+    }
+
+    .strength-classes {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .strength-class {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .strength-class:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .class-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .class-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--primary-blue);
+    }
+
+    .strength-variants {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .variant-card {
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: calc(var(--border-radius) * 0.75);
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .variant-badge {
+        background: var(--primary-orange);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 0.75rem;
+    }
+
+    .variant-badge.normal {
+        background: var(--success-color);
+    }
+
+    .variant-badge.rapid {
+        background: var(--error-color);
+    }
+
+    .variant-badge.low {
+        background: var(--warning-color);
+    }
+
+    .variant-strength {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .variant-details {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.4;
+    }
+
+    /* Chemical Requirements */
+    .chemical-requirements {
+        background: var(--bg-secondary);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .chemical-requirements h4 {
+        color: var(--primary-blue);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .requirements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .requirement-item {
+        background: var(--bg-primary);
+        padding: 1rem;
+        border-radius: calc(var(--border-radius) * 0.75);
+        border: 1px solid var(--border-color);
+        text-align: center;
+    }
+
+    .requirement-label {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+    }
+
+    .requirement-value {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--primary-blue);
+    }
+
+    /* Section Footer */
+    .section-footer {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .author-info, .reviewer-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    .author-info i, .reviewer-info i {
+        color: var(--primary-blue);
+    }
+
+    .author-info a {
+        color: var(--primary-orange);
+        text-decoration: none;
+    }
+
+    .author-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .header-title {
+            font-size: 2rem;
+        }
+
+        .nav-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .search-input {
+            width: 250px;
+        }
+
+        .cement-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .strength-variants {
+            grid-template-columns: 1fr;
+        }
+
+        .credits-section {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    /* Animation Classes */
+    .fade-in {
+        animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .scale-in {
+        animation: scaleIn 0.5s ease-out;
+    }
+
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Loading Animation */
+    .loading {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    /* Utility Classes */
+    .hidden {
+        display: none !important;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .mb-1 { margin-bottom: 0.25rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .mb-4 { margin-bottom: 1rem; }
+
+    .mt-1 { margin-top: 0.25rem; }
+    .mt-2 { margin-top: 0.5rem; }
+    .mt-3 { margin-top: 0.75rem; }
+    .mt-4 { margin-top: 1rem; }
+
+    /* Print Styles */
+    @media print {
+        .navbar, .theme-toggle, .search-container, .filter-tabs {
+            display: none;
+        }
+
+        .cement-card {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+
+        .modal {
+            position: static !important;
+            background: none !important;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="standard-badge">
+                <i class="fas fa-certificate"></i>
+                <span>BS EN 197-1:2011</span>
+            </div>
+
+            <h1 class="header-title">
+                المرجع الشامل لأنواع الاسمنت
+            </h1>
+
+            <p class="header-subtitle">
+                دليل تفاعلي شامل لجميع أنواع الاسمنت والمتطلبات الفنية حسب المواصفة الأوروبية
+                BS EN 197-1:2011
+            </p>
+
+            <div class="credits-section">
+                <div class="credit-item">
+                    <i class="fas fa-user-edit"></i>
+                    <div class="credit-content">
+                        <strong>إعداد:</strong>
+                        <span>الأستاذ فادي م. درويش</span>
+                        <a href="mailto:asrar.cement@gmail.com" class="email-link">
+                            <i class="fas fa-envelope"></i>
+                            asrar.cement@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="credit-item">
+                    <i class="fas fa-user-check"></i>
+                    <div class="credit-content">
+                        <strong>مراجعة:</strong>
+                        <span>إيميل بطارسة</span>
+                        <span>مدير مختبرات الاسمنت الشمالية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <i class="fas fa-building"></i>
+                <span>BS EN 197-1</span>
+            </div>
+
+            <div class="nav-tools">
+                <div class="search-container">
+                    <input type="search" id="searchInput" placeholder="بحث في أنواع الاسمنت..." 
+                           class="search-input">
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <span>الوضع الليلي</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Overview Section -->
+        <section class="section" id="overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-info-circle"></i>
+                        نظرة عامة على المواصفة
+                    </h2>
+                    <p class="section-description">
+                        تغطية شاملة لجميع أنواع الاسمنت المحددة في المواصفة BS EN 197-1:2011
+                    </p>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>إجمالي المنتجات</h3>
+                            <div class="mb-3">
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--primary-blue);">39</div>
+                                <p style="color: var(--text-secondary);">نوع اسمنت مختلف</p>
+                            </div>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">
+                                    <strong>27</strong> نوع اسمنت عادي مميز
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    <strong>7</strong> أنواع مقاومة للكبريتات
+                                </li>
+                                <li>
+                                    <strong>5</strong> أنواع قوة مبكرة منخفضة
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>فئات الاسمنت الرئيسية</h3>
+                            <div style="display: grid; gap: 0.75rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span><strong>CEM I</strong> - بورتلاندي نقي</span>
+                                    <span style="background: var(--success-color); color: white; padding: 0.2rem 0.6rem; border-radius: 1rem; font-size: 0.8rem;">95-100%</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span><strong>CEM II</strong> - بورتلاندي مركب</span>
+                                    <span style="background: var(--primary-blue); color: white; padding: 0.2rem 0.6rem; border-radius: 1rem; font-size: 0.8rem;">65-94%</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span><strong>CEM III</strong> - خبث أفران</span>
+                                    <span style="background: var(--primary-orange); color: white; padding: 0.2rem 0.6rem; border-radius: 1rem; font-size: 0.8rem;">5-64%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>فئات القوة</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div>
+                                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">ثلاث فئات رئيسية:</h4>
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li style="margin-bottom: 0.5rem;">🔸 <strong>32.5 MPa</strong> - للاستخدامات العامة</li>
+                                        <li style="margin-bottom: 0.5rem;">🔸 <strong>42.5 MPa</strong> - للخرسانة الإنشائية</li>
+                                        <li style="margin-bottom: 0.5rem;">🔸 <strong>52.5 MPa</strong> - للتطبيقات عالية القوة</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--primary-orange); margin-bottom: 0.5rem;">مراتب القوة المبكرة:</h4>
+                                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                                        <li>✨ <strong>N</strong> - عادية | <strong>R</strong> - سريعة | <strong>L</strong> - منخفضة</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>المتطلبات الخاصة</h3>
+                            <div style="display: grid; gap: 0.75rem;">
+                                <div>
+                                    <strong style="color: var(--error-color);">مقاومة الكبريتات (SR):</strong>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0.25rem 0;">
+                                        متطلبات خاصة لمحتوى C₃A في الكلنكر
+                                    </p>
+                                </div>
+                                <div>
+                                    <strong style="color: var(--warning-color);">حرارة التميؤ المنخفضة (LH):</strong>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0.25rem 0;">
+                                        ≤ 270 J/g في 7 أيام أو 41 ساعة
+                                    </p>
+                                </div>
+                                <div>
+                                    <strong style="color: var(--primary-blue);">متطلبات كيميائية:</strong>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0.25rem 0;">
+                                        حسب نوع الاسمنت وليس فئة القوة
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cement Types Section -->
+        <section class="section" id="cement-types">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-layer-group"></i>
+                        أنواع الاسمنت الكاملة
+                    </h2>
+                    <p class="section-description">
+                        جميع أنواع الاسمنت الـ39 كما هي محددة في الجداول الرسمية للمواصفة
+                    </p>
+                </div>
+
+                <!-- Filter -->
+                <div class="cement-filter">
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">
+                            الكل (39 نوع)
+                        </button>
+                        <button class="filter-btn" data-filter="common">
+                            العادي (27 نوع)
+                        </button>
+                        <button class="filter-btn" data-filter="sulfate-resistant">
+                            مقاوم للكبريتات (7 أنواع)
+                        </button>
+                        <button class="filter-btn" data-filter="low-early">
+                            قوة مبكرة منخفضة (5 أنواع)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CEM I Family -->
+                <div class="cement-family" data-category="common">
+                    <div class="family-header">
+                        <h3 class="family-title">CEM I - الاسمنت البورتلاندي</h3>
+                        <span class="family-count">نوع واحد</span>
+                    </div>
+                    <div class="cement-grid">
+                        <div class="cement-card" data-type="CEM I">
+                            <div class="cement-header">
+                                <div class="cement-symbol">CEM I</div>
+                                <div class="cement-name">اسمنت بورتلاندي نقي</div>
+                                <div class="clinker-indicator">95-100% كلنكر</div>
+                            </div>
+                            <div class="cement-body">
+                                <div class="composition-bar">
+                                    <div class="clinker-fill" style="width: 97.5%;"></div>
+                                </div>
+                                <p class="cement-description">
+                                    اسمنت بورتلاندي نقي بأعلى محتوى كلنكر. يوفر أعلى قوة مبكرة وخصائص هيدروليكية ممتازة.
+                                </p>
+                                <div class="cement-applications">
+                                    <span class="app-tag">الخرسانة الإنشائية</span>
+                                    <span class="app-tag">التطبيقات عالية القوة</span>
+                                    <span class="app-tag">البناء العام</span>
+                                </div>
+                            </div>
+                            <div class="cement-footer">
+                                <button class="detail-btn" data-cement="CEM I">
+                                    <i class="fas fa-info"></i>
+                                    عرض التفاصيل وفئات القوة
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CEM II Family -->
+                <div class="cement-family" data-category="common">
+                    <div class="family-header">
+                        <h3 class="family-title">CEM II - الاسمنت البورتلاندي المركب</h3>
+                        <span class="family-count">18 نوع</span>
+                    </div>
+                    <div class="cement-grid" id="cemII-grid">
+                        <!-- CEM II/A-S -->
+                        <div class="cement-card" data-type="CEM II/A-S">
+                            <div class="cement-header">
+                                <div class="cement-symbol">CEM II/A-S</div>
+                                <div class="cement-name">بورتلاندي-خبث (6-20%)</div>
+                                <div class="clinker-indicator">80-94% كلنكر + خبث</div>
+                            </div>
+                            <div class="cement-body">
+                                <div class="composition-bar">
+                                    <div class="clinker-fill" style="width: 87%;"></div>
+                                    <div class="additive-fill slag" style="width: 13%;"></div>
+                                </div>
+                                <p class="cement-description">
+                                    اسمنت بورتلاندي مع خبث أفران عالي لتحسين المتانة وتقليل حرارة التميؤ.
+                                </p>
+                                <div class="cement-applications">
+                                    <span class="app-tag">الإنشاءات البحرية</span>
+                                    <span class="app-tag">الخرسانة الكتلية</span>
+                                    <span class="app-tag">البناء المتين</span>
+                                </div>
+                            </div>
+                            <div class="cement-footer">
+                                <button class="detail-btn" data-cement="CEM II/A-S">
+                                    <i class="fas fa-info"></i>
+                                    عرض التفاصيل وفئات القوة
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- CEM II/B-S -->
+                        <div class="cement-card" data-type="CEM II/B-S">
+                            <div class="cement-header">
+                                <div class="cement-symbol">CEM II/B-S</div>
+                                <div class="cement-name">بورتلاندي-خبث (21-35%)</div>
+                                <div class="clinker-indicator">65-79% كلنكر + خبث</div>
+                            </div>
+                            <div class="cement-body">
+                                <div class="composition-bar">
+                                    <div class="clinker-fill" style="width: 72%;"></div>
+                                    <div class="additive-fill slag" style="width: 28%;"></div>
+                                </div>
+                                <p class="cement-description">
+                                    محتوى خبث أعلى لمقاومة كيميائية محسنة وخصائص متانة فائقة.
+                                </p>
+                                <div class="cement-applications">
+                                    <span class="app-tag">المقاومة الكيميائية</span>
+                                    <span class="app-tag">البيئات العدوانية</span>
+                                    <span class="app-tag">المتانة طويلة المدى</span>
+                                </div>
+                            </div>
+                            <div class="cement-footer">
+                                <button class="detail-btn" data-cement="CEM II/B-S">
+                                    <i class="fas fa-info"></i>
+                                    عرض التفاصيل وفئات القوة
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- CEM II/A-D -->
+                        <div class="cement-card" data-type="CEM II/A-D">
+                            <div class="cement-header">
+                                <div class="cement-symbol">CEM II/A-D</div>
+                                <div class="cement-name">بورتلاندي-سليكا فيوم</div>
+                                <div class="clinker-indicator">90-94% كلنكر + سليكا</div>
+                            </div>
+                            <div class="cement-body">
+                                <div class="composition-bar">
+                                    <div class="clinker-fill" style="width: 92%;"></div>
+                                    <div class="additive-fill silica" style="width: 8%;"></div>
+                                </div>
+                                <p class="cement-description">
+                                    اسمنت عالي الأداء مع السليكا فيوم لقوة فائقة ونفاذية منخفضة.
+                                </p>
+                                <div class="cement-applications">
+                                    <span class="app-tag">خرسانة عالية القوة</span>
+                                    <span class="app-tag">نفاذية منخفضة</span>
+                                    <span class="app-tag">تطبيقات متخصصة</span>
+                                </div>
+                            </div>
+                            <div class="cement-footer">
+                                <button class="detail-btn" data-cement="CEM II/A-D">
+                                    <i class="fas fa-info"></i>
+                                    عرض التفاصيل وفئات القوة
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- More CEM II types would be added here -->
+                        <div class="cement-card" style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); border: 2px dashed var(--border-color); cursor: pointer;" id="showMoreCemII">
+                            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px; text-align: center;">
+                                <i class="fas fa-plus-circle" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                                <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">عرض المزيد</h3>
+                                <p style="color: var(--text-secondary);">15 نوع إضافي من CEM II</p>
+                                <small style="color: var(--text-muted);">يشمل P, Q, V, W, T, L, LL, M</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Footer -->
+                <div class="section-footer">
+                    <div class="author-info">
+                        <i class="fas fa-user-edit"></i>
+                        <span><strong>إعداد:</strong> الأستاذ فادي م. درويش | 
+                        <a href="mailto:asrar.cement@gmail.com">asrar.cement@gmail.com</a></span>
+                    </div>
+                    <div class="reviewer-info">
+                        <i class="fas fa-user-check"></i>
+                        <span><strong>مراجعة:</strong> إيميل بطارسة، مدير مختبرات الاسمنت الشمالية</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="cementModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div>
+                    <h2 id="modalTitle">تفاصيل الاسمنت</h2>
+                    <p id="modalSubtitle">فئات القوة والمتطلبات الفنية</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="strength-classes" id="strengthClasses">
+                    <!-- Strength classes will be populated here -->
+                </div>
+                <div class="chemical-requirements" id="chemicalRequirements">
+                    <!-- Chemical requirements will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Data Structure Based on BS EN 197-1:2011
+    const CEMENT_DATA = {
+        'CEM I': {
+            name: 'الاسمنت البورتلاندي',
+            description: 'اسمنت بورتلاندي نقي بأعلى محتوى كلنكر (95-100%)',
+            clinkerRange: '95-100%',
+            strengthClasses: {
+                '32.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '7 أيام ≥ 16.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa',
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['البناء العام', 'الخرسانة العادية', 'أعمال البناء التقليدية']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa', 
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['فك القوالب المبكر', 'أعمال الطوارئ', 'الإنتاج المسبق']
+                        }
+                    }
+                },
+                '42.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة', 
+                            applications: ['الخرسانة الإنشائية', 'الأعمدة والكمرات', 'البلاطات']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 20.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة',
+                            applications: ['فك القوالب السريع', 'الإنشاءات السريعة', 'الإنتاج المسبق']
+                        }
+                    }
+                },
+                '52.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية', 
+                            earlyTest: '2 أيام ≥ 20.0 MPa',
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['الخرسانة عالية القوة', 'الجسور', 'المباني الشاهقة']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 30.0 MPa',
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['فك القوالب فائق السرعة', 'خرسانة مسبقة الإجهاد', 'إنشاءات متخصصة']
+                        }
+                    }
+                }
+            },
+            chemicalRequirements: {
+                'فقدان الاشتعال': '≤ 5.0%',
+                'البقايا غير الذائبة': '≤ 5.0%',
+                'محتوى الكبريتات (32.5N,R & 42.5N)': '≤ 3.5%',
+                'محتوى الكبريتات (42.5R, 52.5N,R)': '≤ 4.0%',
+                'محتوى الكلوريد': '≤ 0.10%'
+            }
+        },
+        'CEM II/A-S': {
+            name: 'اسمنت بورتلاندي-خبث (6-20%)',
+            description: 'اسمنت بورتلاندي مع خبث أفران عالي - نسبة منخفضة',
+            clinkerRange: '80-94%',
+            strengthClasses: {
+                '32.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '7 أيام ≥ 16.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa',
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['البناء العام', 'الإنشاءات البحرية', 'الخرسانة الكتلية']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa',
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['فك القوالب المبكر', 'الإنشاءات البحرية السريعة']
+                        }
+                    }
+                },
+                '42.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة',
+                            applications: ['الخرسانة الإنشائية', 'الإنشاءات البحرية', 'المتانة المحسنة']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 20.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة',
+                            applications: ['الإنشاءات السريعة المقاومة للبيئة البحرية']
+                        }
+                    }
+                },
+                '52.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '2 أيام ≥ 20.0 MPa', 
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['الخرسانة عالية القوة المقاومة للبيئة البحرية']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 30.0 MPa',
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['التطبيقات الخاصة عالية الأداء']
+                        }
+                    }
+                }
+            },
+            chemicalRequirements: {
+                'محتوى الكبريتات (32.5N,R & 42.5N)': '≤ 3.5%',
+                'محتوى الكبريتات (42.5R, 52.5N,R)': '≤ 4.0%', 
+                'محتوى الكلوريد': '≤ 0.10%'
+            }
+        },
+        'CEM II/B-S': {
+            name: 'اسمنت بورتلاندي-خبث (21-35%)',
+            description: 'اسمنت بورتلاندي مع خبث أفران عالي - نسبة متوسطة',
+            clinkerRange: '65-79%',
+            strengthClasses: {
+                '32.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '7 أيام ≥ 16.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa',
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['المقاومة الكيميائية', 'البيئات العدوانية']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa',
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['التطبيقات السريعة في البيئات الكيميائية']
+                        }
+                    }
+                },
+                '42.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة',
+                            applications: ['الخرسانة المقاومة للكبريتات', 'المتانة طويلة المدى']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 20.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة',
+                            applications: ['الإنشاءات السريعة المقاومة للكيماويات']
+                        }
+                    }
+                },
+                '52.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '2 أيام ≥ 20.0 MPa',
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['الخرسانة عالية القوة والمقاومة']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 30.0 MPa',
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['التطبيقات الخاصة فائقة الأداء']
+                        }
+                    }
+                }
+            },
+            chemicalRequirements: {
+                'محتوى الكبريتات (32.5N,R & 42.5N)': '≤ 3.5%',
+                'محتوى الكبريتات (42.5R, 52.5N,R)': '≤ 4.0%',
+                'محتوى الكلوريد': '≤ 0.10%'
+            }
+        },
+        'CEM II/A-D': {
+            name: 'اسمنت بورتلاندي-سليكا فيوم',
+            description: 'اسمنت عالي الأداء مع السليكا فيوم (6-10%)',
+            clinkerRange: '90-94%',
+            strengthClasses: {
+                '32.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '7 أيام ≥ 16.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa',
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['خرسانة محسنة الأداء', 'نفاذية منخفضة']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 32.5-52.5 MPa',
+                            settingTime: '≥ 75 دقيقة',
+                            applications: ['تطبيقات سريعة عالية الأداء']
+                        }
+                    }
+                },
+                '42.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '2 أيام ≥ 10.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة',
+                            applications: ['خرسانة عالية الأداء', 'مقاومة النفاذية']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 20.0 MPa',
+                            standardTest: '28 يوم: 42.5-62.5 MPa',
+                            settingTime: '≥ 60 دقيقة',
+                            applications: ['تطبيقات سريعة فائقة الأداء']
+                        }
+                    }
+                },
+                '52.5': {
+                    variants: {
+                        'N': {
+                            name: 'قوة مبكرة عادية',
+                            earlyTest: '2 أيام ≥ 20.0 MPa',
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['خرسانة فائقة القوة', 'تطبيقات متخصصة']
+                        },
+                        'R': {
+                            name: 'قوة مبكرة سريعة',
+                            earlyTest: '2 أيام ≥ 30.0 MPa',
+                            standardTest: '28 يوم: ≥ 52.5 MPa',
+                            settingTime: '≥ 45 دقيقة',
+                            applications: ['أعلى مستويات الأداء والسرعة']
+                        }
+                    }
+                }
+            },
+            chemicalRequirements: {
+                'محتوى الكبريتات (32.5N,R & 42.5N)': '≤ 3.5%',
+                'محتوى الكبريتات (42.5R, 52.5N,R)': '≤ 4.0%',
+                'محتوى الكلوريد': '≤ 0.10%',
+                'قيود السليكا فيوم': 'الحد الأقصى 10%'
+            }
+        }
+    };
+
+    // Application State
+    let currentFilter = 'all';
+    let currentTheme = 'light';
+
+    // DOM Elements
+    const themeToggle = document.getElementById('themeToggle');
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const modal = document.getElementById('cementModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const strengthClasses = document.getElementById('strengthClasses');
+    const chemicalRequirements = document.getElementById('chemicalRequirements');
+
+    // Initialize Application
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeEventListeners();
+        loadSavedTheme();
+        animateOnScroll();
+    });
+
+    function initializeEventListeners() {
+        // Theme Toggle
+        themeToggle.addEventListener('click', toggleTheme);
+
+        // Filter Buttons
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                setActiveFilter(this.dataset.filter);
+            });
+        });
+
+        // Search Input
+        searchInput.addEventListener('input', handleSearch);
+
+        // Modal Controls
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+
+        // Cement Card Click Events
+        document.addEventListener('click', function(e) {
+            const detailBtn = e.target.closest('.detail-btn');
+            if (detailBtn) {
+                const cementType = detailBtn.dataset.cement;
+                openCementModal(cementType);
+            }
+        });
+
+        // Escape key to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
+    function toggleTheme() {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        const icon = themeToggle.querySelector('i');
+        const text = themeToggle.querySelector('span');
+
+        if (currentTheme === 'dark') {
+            icon.className = 'fas fa-sun';
+            text.textContent = 'الوضع النهاري';
+        } else {
+            icon.className = 'fas fa-moon';
+            text.textContent = 'الوضع الليلي';
+        }
+
+        localStorage.setItem('theme', currentTheme);
+    }
+
+    function loadSavedTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            currentTheme = savedTheme;
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            const icon = themeToggle.querySelector('i');
+            const text = themeToggle.querySelector('span');
+
+            if (currentTheme === 'dark') {
+                icon.className = 'fas fa-sun';
+                text.textContent = 'الوضع النهاري';
+            }
+        }
+    }
+
+    function setActiveFilter(filter) {
+        currentFilter = filter;
+
+        // Update active button
+        filterBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.filter === filter);
+        });
+
+        // Filter cement families
+        filterCementFamilies();
+    }
+
+    function filterCementFamilies() {
+        const families = document.querySelectorAll('.cement-family');
+
+        families.forEach(family => {
+            const category = family.dataset.category;
+            let shouldShow = false;
+
+            switch (currentFilter) {
+                case 'all':
+                    shouldShow = true;
+                    break;
+                case 'common':
+                    shouldShow = category === 'common';
+                    break;
+                case 'sulfate-resistant':
+                    shouldShow = category === 'sulfate-resistant';
+                    break;
+                case 'low-early':
+                    shouldShow = category === 'low-early';
+                    break;
+            }
+
+            if (shouldShow) {
+                family.style.display = 'block';
+                family.classList.add('fade-in');
+            } else {
+                family.style.display = 'none';
+            }
+        });
+    }
+
+    function handleSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+        const cementCards = document.querySelectorAll('.cement-card');
+
+        cementCards.forEach(card => {
+            const symbol = card.querySelector('.cement-symbol')?.textContent.toLowerCase() || '';
+            const name = card.querySelector('.cement-name')?.textContent.toLowerCase() || '';
+            const description = card.querySelector('.cement-description')?.textContent.toLowerCase() || '';
+
+            const matches = symbol.includes(query) || 
+                           name.includes(query) || 
+                           description.includes(query);
+
+            if (matches || query === '') {
+                card.style.display = 'block';
+                card.classList.add('scale-in');
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function openCementModal(cementType) {
+        const data = CEMENT_DATA[cementType];
+        if (!data) return;
+
+        // Set modal title
+        modalTitle.textContent = data.name;
+        modalSubtitle.textContent = `${data.description} - فئات القوة والمتطلبات الفنية`;
+
+        // Generate strength classes content
+        generateStrengthClassesContent(data.strengthClasses);
+
+        // Generate chemical requirements content
+        generateChemicalRequirementsContent(data.chemicalRequirements);
+
+        // Show modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function generateStrengthClassesContent(strengthClasses) {
+        let html = '<h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-dumbbell"></i>فئات القوة المتاحة</h3>';
+
+        Object.entries(strengthClasses).forEach(([classType, classData]) => {
+            html += `
+                <div class="strength-class">
+                    <div class="class-header">
+                        <h4 class="class-name">فئة ${classType} MPa</h4>
+                    </div>
+                    <div class="strength-variants">
+            `;
+
+            Object.entries(classData.variants).forEach(([variant, variantData]) => {
+                let badgeClass = 'normal';
+                if (variant === 'R') badgeClass = 'rapid';
+                if (variant === 'L') badgeClass = 'low';
+
+                html += `
+                    <div class="variant-card">
+                        <div class="variant-badge ${badgeClass}">${variant}</div>
+                        <div class="variant-strength">${variantData.name}</div>
+                        <div class="variant-details">
+                            <div style="margin-bottom: 0.5rem;"><strong>اختبار القوة المبكرة:</strong><br>${variantData.earlyTest}</div>
+                            <div style="margin-bottom: 0.5rem;"><strong>اختبار القوة القياسية:</strong><br>${variantData.standardTest}</div>
+                            <div style="margin-bottom: 0.5rem;"><strong>زمن الشك:</strong><br>${variantData.settingTime}</div>
+                            <div><strong>التطبيقات:</strong><br>${variantData.applications.join('، ')}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div></div>';
+        });
+
+        strengthClasses.innerHTML = html;
+    }
+
+    function generateChemicalRequirementsContent(requirements) {
+        let html = `
+            <h4 style="color: var(--primary-blue); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-flask"></i>
+                المتطلبات الكيميائية
+            </h4>
+            <div class="requirements-grid">
+        `;
+
+        Object.entries(requirements).forEach(([property, value]) => {
+            html += `
+                <div class="requirement-item">
+                    <div class="requirement-label">${property}</div>
+                    <div class="requirement-value">${value}</div>
+                </div>
+            `;
+        });
+
+        html += '</div>';
+        chemicalRequirements.innerHTML = html;
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    function animateOnScroll() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe cement cards
+        document.querySelectorAll('.cement-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Observe overview cards
+        document.querySelectorAll('.overview-card').forEach(card => {
+            observer.observe(card);
+        });
+    }
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Print functionality
+    function printCementDetails() {
+        window.print();
+    }
+
+    // Export functionality (placeholder)
+    function exportCementData() {
+        console.log('Export functionality would be implemented here');
+    }
+
+    // Progressive Web App features
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('SW registered: ', registration);
+            }).catch(function(registrationError) {
+                console.log('SW registration failed: ', registrationError);
+            });
+        });
+    }
+    </script>
+</body>
+</html>
